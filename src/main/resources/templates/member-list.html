@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Booking Form</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/style.css" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<h1>Here are all the members</h1>
+
+<a href='/facility/create'> <button>Create Facilities</button></a>
+
+<a href='/member/create'> <button>Create Member</button></a>
+
+<a href='/booking/create'> <button>Create Booking</button></a>
+
+<table th:if="${not #lists.isEmpty(members)}">
+<tr>
+<th>Surname Name</th>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+<tr th:each="m:${members}">
+<td th:text="${m.surName}">Surname</td>
+<td th:text="${m.firstName}">First name</td>
+<td th:text="${m.lastName}">Last Name</td>
+</tr>
+
+
+
+
+
+</table>
+
+</body>
+</html>

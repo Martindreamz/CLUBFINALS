@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Booking Form</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/style.css" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+	<h1>Create a member</h1>
+
+	<form action="#" th:object="${member}" th:action="@{/member/save}">
+		<fieldset>
+			<input type="hidden" th:field="*{memberId}">
+		</fieldset>
+		<fieldset>
+			<input type="text" th:field="*{firstName}">
+		</fieldset>
+		<fieldset>
+			<input type="text" th:field="*{surName}">
+		</fieldset>
+		<fieldset>
+			<input type="text" th:field="*{lastName}">
+		</fieldset>
+		<fieldset>
+			<input type="submit" value="Save"> <input type="reset"
+				value="clear">
+		</fieldset>
+	</form>
+
+</body>
+</html>
